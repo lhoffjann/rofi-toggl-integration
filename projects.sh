@@ -1,10 +1,5 @@
 #!/bin/bash
-cwd=$(echo $(dirname $0))
-
-
-
 echo $tasks
-
 #Pass tasks to rofi, and get the output as the selected option
 selected=$(echo $tasks | jq -j 'map(.name) | join("\n")' | rofi -dmenu -matching fuzzy -i -p "Search tasks")
 task=$(echo $tasks | jq ".[] | select(.name == \"$selected\")")
