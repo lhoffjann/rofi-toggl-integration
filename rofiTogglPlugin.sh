@@ -9,6 +9,8 @@ checkIfTogglIsRunning ()
     result=$(echo -e "stopTask\nstartNewTask" | rofi -dmenu -i -p "$message ")
     if [[ $result == "stopTask" ]]; then
       dunstify $(toggl stop)
+    elif [[ $result == "" ]]; then
+        exit 0
     else
       startNewTask
     fi
