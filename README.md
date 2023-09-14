@@ -1,6 +1,3 @@
-# rufi-toggl-integration
-This is a fork from https://github.com/moustacheful/myrmidon
+# rofi-toggl-integration
 
-it enables you to start the toggl api from rofi
-
-Project needs refactoring but it does what it is supposed to do
+This script enables you to start and stop a timer within toggl using rofi
